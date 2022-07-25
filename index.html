@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>什么王者荣耀</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<style>
+    *{  
+        list-style: none;
+		text-decoration: none;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    li{
+        list-style: none;
+    }
+    .fl{
+        float: left;
+    }
+    .fr{
+        float: right;
+    }
+    body{
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    a{
+        text-decoration: none;
+        color:#b1b2be;
+     }
+    a:hover{
+        color:#e4b653 ;
+    }
+    /* img{
+        vertical-align: bottom;
+    } */
+    .header{
+        height: 85px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #c9c9dd;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    /* 上块设置，黑色单独设置填满横幅body块 */
+    .header .logol1{
+        width: 200px;
+        height: 54px;
+        margin-top: 15px;
+    }
+    .header .headt2{
+        margin-left: 30px;
+        height: 40px;
+        width: 770px;
+    }
+    .header .headt2 ul li{
+        width: 110px;
+        height: 84px;
+        float: left;
+    }
+    .header .headt2 ul li:hover{
+        background: url(images/index.png) no-repeat;
+    }
+    .header .headt2 ul li a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    /* 一个a占满一整个li */
+    .header .headt2 ul li a span{
+        display: block;
+        padding-top: 25px;
+        font-size: 18px;
+        color: #c9c9dd;
+    }
+    .header .headt2 ul li a p{
+        font-size: 12px;
+        color:#646e7e;
+    }
+    .header .loginr3{
+        width: 180px;
+        height: 46px;
+        margin-left: 20px;
+        margin-top: 16px;
+    }
+    .header .loginr3 .loginr3l{
+        width: 56px;
+        height: 56px;
+        background: url(images/index.png) no-repeat -184px 0;
+    }
+    .header .loginr3 .loginr3tr{
+        margin-top: 9px;
+    }
+    .header .loginr3 .loginr3tr span{
+        color: white;
+        font-size: 14px;
+    }
+    .header .loginr3 .loginr3tr p{
+        color:#858792;
+    }
+    /* 下拉 */
+    .header .listbobobobot{
+        background: rgb(0,0,0,0.7);
+        position: absolute;
+        left: 0;
+        top: 84px;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+    .header:hover .listbobobobot{
+        height: 300px;
+    }
+    .listbobobobot ul{
+        margin-left: 340px;
+        margin-top: 15px;
+    }
+    .header .listbobobobot ul li{
+        width: 110px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+        float: left;
+    }
+    .listbobobobot ul li a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+    }
+    .listbobobobot ul li a:hover{
+        color:#f3c258;
+        text-decoration: underline;
+    }
+        /* 最新小图标 */
+        .listbobobobot ul li a .icon_new{
+        background: url(images/index.png) no-repeat -137px -66px;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    /* 热门小图标 */
+    .listbobobobot ul li a .icon_hot{
+        background: url(images/index.png) no-repeat -163px -66px;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    /* 圆形小图标 */
+    .listbobobobot ul li a .icon_queen{
+        background: url(images/index.png) no-repeat -136px -4px;
+        width: 24px;
+        height: 27px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    /* 盾牌小图标 */
+    .listbobobobot ul li a .icon_suo{
+        background: url(images/index.png) no-repeat -137px -35px;
+        width: 25px;
+        height: 27px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    /* 向下版心 */
+    .main{
+        background: url(images/main_bg.jpg) no-repeat center top;
+        height: 1100px;
+    }
+    .main .top{
+        background: rgba(0, 0, 0, 0.8);
+        height: 340px;
+        position: relative;
+        left: 0;
+        top: 540px;
+    }
+    .main .top .topleft{
+        width: 600px;
+    }
+    .main .top .toplefttop{
+        height: 300px;
+        background: url(images/banner1.jpg) no-repeat;
+    }
+    .main .top .topleftbot .b1{
+        height: 31px;
+        width: 120px;
+        float: left;
+        text-align: center;
+        padding-top: 9px;
+    }
+    .main .top .topleftbot .b1:hover{
+        background: #4b4c5671;
+    }
+    .main .top .topcenter{
+        width: 330px;
+        height: 340px;
+        margin-left: 15px;
+    }
+    .main .top .topcenter .topcentertop{
+        line-height: 45px;
+    }
+    .main .top .topcenter .topcentertop ul li{
+        width: 55px;
+        float: left;
+        border-bottom: 1px solid black;
+    }
+    .main .top .topcenter .topcentertop ul li:hover{
+        border-bottom: 1px solid #e4b653;
+    }
+    .main .top .topcenter .topcentertop ul li a{
+        font-size: 14px;
+        text-align: center;
+        display: block;
+    }
+    .main .top .topcenter .topcenterbot{
+        height: 315px;
+    }
+    .main .top .topcenter .topcenterbot .first{
+        width: 300px;
+        line-height: 35px;
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        margin: 15px;
+        background: rgba(128, 128, 128, 0.445);
+        float: left;
+    }
+    .main .top .topcenter .topcenterbot .first a{
+        color: #e4b653;
+    }
+    .main .top .topcenter .topcenterbot ul li{
+        width: 330px;
+        line-height: 31px;
+        float: left;
+    }
+    .main .top .topcenter .topcenterbot ul li a{
+        font-size: 14px;
+
+    }
+    /* .main .top .topcenter .topcenterbot ul li{
+    overflow: hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+     } 省略就省略，哈哈真有你的*/
+    .main .top .topcenter .topcenterbot ul li span{
+        float: right;
+    }
+    .main .top .topright{
+        width: 240px;        
+    }
+    .main .top .topright .r1{
+        display: block;
+        height: 120px;
+    }
+    .main .top .topright .r1 video{
+        object-fit: cover;
+    }
+    .main .top .topright .r1{
+        background: url(images/index.png) no-repeat 0 -220px;
+    }
+    .main .top .topright .r2{
+        display: block;
+        height: 110px;
+    }
+    .main .top .topright .r2{
+        background: url(images/index.png) no-repeat 0 -346px;
+    }
+    .main .top .topright .r3{
+        display: block;
+        height: 110px;
+    }
+    .main .top .topright .r3{
+        background: url(images/index.png) no-repeat 0 -459px;
+    }
+    .main .center div{
+        height: 134px;
+        margin-top: 30px;
+    }
+    .main .center .cc1{
+        margin-right: 12px;
+        width: 291px;       
+        background: url(images/官方爆料.jpg);
+    }
+    .center .cc2{
+        margin-right: 12px;
+        width: 291px;
+        background: url(images/王者营地.jpg);
+    }
+    .center .cc3{
+        margin-right: 12px;
+        width: 291px;
+        background: url(images/荣耀传承.jpg);
+    }
+    .center .cc4{
+        width: 291px;
+        background: url(images/赛事专区.jpg);
+    }
+    /* 三百罗汉 */
+    .Center{
+	    background: url(images/ny_con_bg.jpg)no-repeat center top;
+	    height:1345px;
+    }
+    .Center .centerhead{
+        width: 1200px;
+        height: 120px;
+        margin-top: 22px;
+    }
+    .Center .centerhead .headtop{
+        width: 1200px;
+        height: 45px;
+        font-size: 18px;
+        padding-top: 15px;
+    }
+    .Center .centerhead .headbot ul li{
+        width: 400px;
+        height: 25px;
+        float: left;
+        border-bottom: 3px solid rgba(128, 128, 128, 0.493);
+    }
+    .Center .centerhead .headbot ul li:hover{
+        border-bottom: 3px solid #2c88e2;
+    }
+    .Center .centerhead .headbot ul li a{
+        color: rgb(26, 26, 26);
+        font-size: 16px;
+        text-align: center;
+        display: block;
+    }
+    .Center .centerhead .headbot ul li a:hover{
+        color: #2c88e2;
+    }
+    .Center .check0{
+        width: 1200px;
+        height: 80px;
+        background: white;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .Center .check0 .checkleft{
+        width: 76px;
+        background: #2c88e2;
+        color: #efefef;
+    }
+    .Center .check0 .checkleft .cl1{
+        text-align: center;
+        width: 76px;
+        height: 30px;
+        margin-top: 10px;
+        margin-left: 2px;
+        font-size: 16px;
+    }
+    .Center .check0 .checklist{
+        width: 794px;
+        height: 80px;
+    }
+    /* 按钮颜色 */
+
+    /* 按钮颜色 */
+    .Center .listtop{
+        width: 794px;
+        height: 40px;
+    }
+    .Center .listtop ul li{
+        width: 80px;
+        margin: 10px;
+        float: left;
+    }
+    .Center .listbot{
+        width: 794px;
+        height: 40px;
+    }
+    .Center .listbot ul li{
+        width: 80px;
+        margin: 10px;
+        float: left;
+    }
+    .Center .search0{
+        width: 330px;
+        height: 54px;
+        margin-top: 26px;
+    }
+    .Center .check0 .search0 .search{
+        border: 1px solid rgba(128, 128, 128, 0.432);
+        height: 40px;
+        background: url("images/vl_search_icon.png")no-repeat 210px;
+        background-size: 16px;
+        padding-left: 17px;
+        padding-right: 38px;
+        color: #646467;
+    }
+    .Center .luohan{
+        width: 1200px;
+        border: 1px solid #e8e8e8;
+        padding-bottom: 56px;
+    }
+    .Center .luohan .clearfix{
+        width: 1200px;
+        margin: 28px;
+    }
+    .Center .luohan ul li{
+        width: 70px;
+        height: 70px;
+        border: 2px solid #258df2;
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        float: left;
+        margin: 20px;
+    }
+    .Center .luohan ul li img{
+        width: 70px;
+        height: 70px;
+        
+    }
+    .Center .luohan ul li a{
+        display: block;
+        text-align: center;
+        color: #000;
+    }
+    .Center .luohan ul li a:hover{
+        color: red;
+    }
+    /* 到脚了 */
+    .foot{
+        width: 100%;
+        height: 362px;
+        background:url(images/bg_footer.jpg)no-repeat center bottom;
+    }
+    .foot .f0{
+        width: 100%;
+        height: 262px;
+        padding-top: 90px;
+    }
+    .foot .f1{
+        width: 1200px;
+        height: 64px;
+        background: url(images/spr.png)no-repeat;
+        border-bottom: 1px solid rgb(190, 190, 190);
+    }
+    .foot .f23{
+        height: 150px;
+        margin-top: 50px;
+        line-height: 20px;
+    }
+    .foot .f23 p{
+        color: #646467;
+    }
+    .foot .f23 .f2{
+        width: 504px;
+        height: 150px;
+        margin-right: 55px;
+    }
+    .foot .f23 .f3{
+        width: 640px;
+        height: 150px;
+    }
+    .foot .f23 .f3 .pright span{
+        float: right;
+    }
+    .foot .f23 .f3 .pborleft span{
+        border-right:1px solid #000;
+        padding-right: 4px;
+    }
+    .foot .pimg{
+        vertical-align: middle;
+    }
+</style>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logol1 fl">
+                <a href="#"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="headt2 fl">
+            <ul class="totototop">
+                <li>
+                    <a href="#">
+                        <span>官网首页</span>
+                        <p>HOME</p>
+                    </a>                    
+                </li>
+                <li>
+                    <a href="#">
+                        <span>游戏资料</span>
+                        <p>DATA</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>内容中心</span>
+                        <p>RAIDERS</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>赛事中心</span>
+                        <p>MATCH</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>商城/合作</span>
+                        <p>STORE</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>社区互动</span>
+                        <p>COMMUNITY</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>玩家支持</span>
+                        <p>PLAYER</p>
+                    </a>
+                </li>
+            </ul>
+            </div>
+            <div class="loginr3 fr">
+                <div class="loginr3l fl"></div>
+                <div class="loginr3tr fr">
+                    <span>欢迎登录</span>
+                    <p>登录后查看游戏战绩</p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="listbobobobot">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="#">版本介绍</a>
+                        <a href="#">游戏介绍</a>
+                        <a href="#">英雄资料</a>
+                        <a href="#">爆料站</a>
+                        <a href="#">故事站</a>
+                        <a href="#">游戏壁纸</a>
+                    </li>
+                    <li>
+                        <a href="#">攻略中心</a> 
+                        <a href="#">英雄攻略</a> 
+                        <a href="#">视频中心</a> 
+                        <a href="#"><span class="icon_new"></span>王者视角</a>
+                        <a href="#"><span class="icon_new"></span>作者入驻</a>
+                        <a href="#"><span class="icon_new"></span>媒体入驻</a>
+                    </li>
+                    <li>
+                        <a href="#">冠军杯</a>
+                        <a href="#">KPL</a>
+                        <a href="#">高校赛</a>
+                        <a href="#">城市赛</a>
+                        <a href="#">全民赛</a>
+                        <a href="#"><span class="icon_new"></span>赛事数据</a>
+                    </li>
+                    <li>
+                        <a href="#">荣耀·传承</a>
+                        <a href="#"><span class="icon_new"></span>王者音乐听</a>
+                        <a href="#">万千世界</a>
+                        <a href="#">百态王者</a>
+                        <a href="#">WiFi特权</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="icon_hot"></span>王者营地</a>
+                        <a href="#">手Q部落</a>
+                        <a href="#">微信圈子</a>
+                        <a href="#">官方微博</a>
+                        <a href="#">微信公众号</a>
+                        <a href="#">手Q订阅号</a>
+                        <a href="#"><span class="icon_new"></span>同人社区</a>
+                        <a href="#"><span class="icon_new"></span>星光殿堂</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="icon_queen"></span>成长守护平台</a>
+                        <a href="#"><span class="icon_suo"></span>健康系统</a>
+                        <a href="#"><span class="icon_new"></span>狄仁杰护卫站</a>
+                        <a href="#">客服专区</a>
+                        <a href="#">礼包兑换</a>
+                        <a href="#">自助服务</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>   
+    <div class="main">
+        <div class="container">
+            <div class="top">
+                <div class="topleft fl">
+                    <div class="toplefttop"></div>
+                    <div class="topleftbot fl">
+                        <div class="b1"><a href="#">大桥孙策情侣皮肤</a></div>
+                        <div class="b1"><a href="#">CP大作战上演</a></div>
+                        <div class="b1"><a href="#">KPL转会期公示</a></div>
+                        <div class="b1"><a href="#">克制上官婉儿</a></div>
+                        <div class="b1"><a href="#">王者春晚花絮</a></div>
+                    </div>
+                </div>
+                <div class="topcenter fl">
+                    <div class="topcentertop">
+                        <ul>
+                            <li><a href="#">全部</a></li>
+                            <li><a href="#">新闻</a></li>
+                            <li><a href="#">公告</a></li>
+                            <li><a href="#">活动</a></li>
+                            <li><a href="#">赛事</a></li>
+                            <li><a href="#">...</a></li>
+                        </ul>
+                    </div>
+                    <div class="topcenterbot fl">
+                        <ul> 
+                            <!-- 待改 -->
+                            <li class="first"><a href="#">1月24日全服建议更新公告</a></li>
+                            <li><a href="#">新的福利已准备好 感受新年第一波甜蜜吧<span>01/23</span></a></li>
+                            <li><a href="#">1月23日全服不停机更新公告<span>01/22</span></a></li>
+                            <li><a href="#">向团聚出发！《2019王者耀新春》1月27...<span>01/22</span></a></li>
+                            <li><a href="#">关于美术体验优化及性能优化进展公告<span>01/20</span></a></li>
+                            <li><a href="#">猫狗日记皮肤无法赠送问题说明<span>01/25</span></a></li>
+                            <li><a href="#">王者出征版本更新常见问题解答(画面明...<span>01/24</span></a></li>
+                            <li><a href="#">鲁班-星空梦想皮肤局内异常说明<span>01/23</span></a></li>
+                        </ul>
+                    </div>
+
+                
+                </div>
+
+                <div class="topright fr">
+                    <a class="r1" href="#">
+                        <video src="images/btn-download.mp4" width="100%" height="100%" autoplay="autoplay" muted="muted" loop="loop" ></video>
+                    </a>
+                    <a class="r2" href="#"></a>
+                    <a class="r3" href="#"></a>
+                </div>
+                <div class="center">
+                    <div class="cc1 fl"></div>
+                    <div class="cc2 fl"></div>
+                    <div class="cc3 fl"></div>
+                    <div class="cc4 fr"></div>            
+                </div>            
+            </div>            
+        </div>
+    </div>
+    <div class="Center">
+         <div class="container">
+                <div class="centerhead fl">
+                    <div class="headtop fl"><img src="images/icon_hero.png" alt=""><b>英雄介绍</b></div>
+                    <div class="headbot fl">
+                    <ul>
+                        <li><a href="#">英雄</a></li>
+                        <li><a href="#">局内道具</a></li>
+                        <li><a href="#">召唤师技能</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="check0 fl">
+                    <div class="checkleft fl">
+                        <div class="cl1 fl">综合</div>
+                        <div class="cl1 fl">定位</div>
+                    </div>
+                    <div class="checklist fl">
+                        <div class="listtop fl">
+                            <ul>
+                                <li><input name="yuan" type="radio">&nbsp;&nbsp;本周免费</li>
+                                <li><input name="yuan" type="radio">&nbsp;&nbsp;新手推荐</li>
+                            </ul>
+                        </div>
+                    <div class="listbot fl">
+                                <ul>
+                                <li><input name="yuan" type="radio" checked>&nbsp;&nbsp;全部</li>
+                                <li><input name="yuan" type="radio">&nbsp;&nbsp;坦克</li>
+                                <li><input name="yuan" type="radio">&nbsp;&nbsp;战士</li>
+                                <li><input name="yuan" type="radio">&nbsp;&nbsp;刺客</li>
+                                <li><input name="yuan" type="radio">&nbsp;&nbsp;法师</li>
+                                <li><input name="yuan" type="radio">&nbsp;&nbsp;射手</li>
+                                <li><input name="yuan" type="radio">&nbsp;&nbsp;辅助</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="search0 fr">
+                        <input type="text" class="search" value="请输入你想要输入的英雄名" size="22">
+                    </div>
+                </div>
+                <div class="luohan fl">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="#"><img src="images/515.jpg">嫦娥</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/513.jpg">上官婉儿</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/507.jpg">李信</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/312.jpg">沈梦溪</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/508.jpg">伽罗</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/509.jpg">盾山</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/137.jpg">司马懿</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/510.jpg">孙策</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/125.jpg">元歌</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/504.jpg">米莱狄</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/503.jpg">狂铁</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/197.jpg">弈星</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/502.jpg">裴擒虎</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/176.jpg">杨玉环</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/199.jpg">公孙离</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/501.jpg">明世隐</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/179.jpg">女娲</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/198.jpg">梦奇</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/194.jpg">苏烈</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/195.jpg">百里玄策</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/196.jpg">百里守约</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/193.jpg">铠</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/189.jpg">鬼谷子</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/182.jpg">干将莫邪</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/187.jpg">东皇太一</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/191.jpg">大乔</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/192.jpg">黄忠</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/190.jpg">诸葛亮</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/180.jpg">哪吒</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/186.jpg">太乙真人</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/184.jpg">蔡文姬</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/183.jpg">雅典娜</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/178.jpg">杨戬</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/177.jpg">成吉思汗</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/175.jpg">钟馗</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/174.jpg">虞姬</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/173.jpg">李元芳</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/171.jpg">张飞</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/170.jpg">刘备</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/169.jpg">后羿</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/168.jpg">牛魔</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/167.jpg">孙悟空</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/166.jpg">亚瑟</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/163.jpg">橘右京</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/162.jpg">娜可露露</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/157.jpg">不知火舞</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/156.jpg">张良</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/154.jpg">花木兰</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/153.jpg">兰陵王</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/152.jpg">王昭君</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/150.jpg">韩信</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/149.jpg">刘邦</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/148.jpg">姜子牙</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/146.jpg">露娜</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/144.jpg">程咬金</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/142.jpg">安琪拉</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/141.jpg">貂蝉</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/140.jpg">关羽</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/139.jpg">老夫子</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/136.jpg">武则天</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/135.jpg">项羽</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/134.jpg">达摩</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/133.jpg">狄仁杰</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/132.jpg">马可波罗</a>
+                        </li>
+                    
+                        <li>
+                            <a href="#"><img src="images/131.jpg">李白</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/130.jpg">宫本武藏</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/129.jpg">典韦</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/128.jpg">曹操</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/127.jpg">甄姬</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/126.jpg">夏侯惇</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/124.jpg">周瑜</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/123.jpg">吕布</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/121.jpg">芈月</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/120.jpg">白起</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/119.jpg">扁鹊</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/118.jpg">孙膑</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/117.jpg">钟无艳</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/116.jpg">阿轲</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/115.jpg">高渐离</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/114.jpg">刘禅</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/113.jpg">庄周</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/112.jpg">鲁班七号</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/111.jpg">孙尚香</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/110.jpg">嬴政</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/109.jpg">妲己</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/108.jpg">墨子</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/107.jpg">赵云</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/106.jpg">小乔</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/105.jpg">廉颇</a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </div> -->
+    <div class="foot">
+            <div class="container">
+                <div class="f0">
+                    <div class="f1 fl"></div>
+                    <div class="f23 fl">
+                        <div class="f2 fl">
+                            <p><b>温馨提示：本游戏适合16岁(含)以上玩家娱乐</b></p>
+                            <p>抵制不良游戏&nbsp;&nbsp;
+                            拒绝盗版游戏&nbsp;&nbsp;
+                            注意自我保护&nbsp;&nbsp;
+                            谨防受骗上当&nbsp;&nbsp;
+                            适度游戏益脑&nbsp;&nbsp;
+                            沉迷游戏伤身&nbsp;&nbsp;
+                            合理安排时间&nbsp;&nbsp;
+                            享受健康生活
+                            </p>
+                            <br>
+                            <p>《王者荣耀》全部背景故事发生于架空世界“王者大陆”中。相关人物、地理、事件均为艺术创作，并非正史。若因观看王者故事对相关历史人物产生兴趣，建议查阅正史记载</p>
+                        </div>
+                        <div class="f3 fr">
+                            <p class="pborleft">
+                                <span>腾讯互动娱乐</span>
+                                <span>服务条款</span>
+                                <span>腾讯游戏隐私保护指引</span>
+                                <span>腾讯游戏招聘</span>
+                                <span>腾讯游戏客服</span>
+                                <span>游戏地图</span>
+                                <span>商务合作</span>
+                                <span>腾讯网</span>
+                                <span>网站导航</span>
+                            </p>
+                            <p> COPYRIGHT © 1998 - 2019 TENCENT. ALL RIGHTS RESERVED.</p>
+                            <p class="pright">粤网文[2017]6138-1456号|（总）网出证（粤）字第057号<span>腾讯公司版权所有</span></p>
+                            <p><img class="pimg" src="images/icplogo.png" alt="图片不在隔壁文件？路径错误？">文网游备字[2016]M-CSG 0059 号|新广出审[2017] 6712号|ISBN 978-7-7979-8408-9</p>
+                            <p>全国文化市场统一举报电话：12318</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
