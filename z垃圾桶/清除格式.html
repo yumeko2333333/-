@@ -1,0 +1,97 @@
+
+
+
+<input type="file" value="简历文件"><br>
+
+
+<a href="#" class="hide">官方微信</a>
+<a href="#" class="show"></a>
+
+<style>
+.hide {
+  display: none;
+}
+</style>
+
+
+<!-- 测试 -->
+<style>
+  .online_4 .customer {
+  --position: absolute;
+  position: var(--position);
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  top: 12%;
+  right: 0;
+  z-index: 10;
+  background: red;
+}
+.online_4 .customer-content {
+  display: flex;
+  flex-direction: column;
+  width: 78px;
+  height: 78px;
+  padding: 10px;
+  position: relative;
+}
+.online_4 .customer-content .customer-show p {
+  line-height: 1.5;
+  font-size: 14px;
+  text-align: center;
+  text-indent: 0;
+}
+.online_4 .customer-content .customer-hide {
+  display: none;
+  width: 200px;
+  padding: 10px;
+  position: absolute;
+  right: 80px;
+  top: 0;
+  border-radius: 10px;
+  text-align: center;
+}
+.online_4 .customer-content .customer-show .image img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.online_4 .customer-content:hover .customer-hide {
+  display: block;
+}
+</style>
+<div class="online_4">
+  <div class="customer">
+    <div class="customer-content">
+      <div class="customer-hide">
+          <img src="//cdn.xuansiwei.com/d0000000/1572945894694/cord.jpg?x-oss-process=style/small" alt="" loading="lazy">
+          <p>微信二维码</p>
+      </div>
+      <div class="customer-show">
+          <a href="#">
+              <figure class="image">
+                  <img src="//cdn.xuansiwei.com/d0000000/1606197182756/erweima.png?x-oss-process=style" loading="lazy">
+              </figure>
+          </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="customer-content">
+  <div class="customer-show back-top">
+      <a href="javascript:;">
+          <figure class="image is-32x32">
+              <img src="//cdn.xuansiwei.com/d0000000/1606197209954/fanhui.png?x-oss-process=style" loading="lazy">
+          </figure>
+          <p>返回顶部</p>
+      </a>
+  </div>
+</div>
+
+<script>
+//回到顶部
+$('.back-top').click(function() {
+$('body,html').animate({scrollTop: 0},500);
+return false;
+})
+</script>

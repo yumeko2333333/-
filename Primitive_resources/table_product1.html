@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>产品详情-表单</title>
+</head>
+<body>
+  <!-- <table border="1">
+    <tr>
+        <th>*Manufacturer</th>
+        <th>${product.intro || ''}</th>
+    </tr>
+    <tr>
+        <th>*Datecode</th>
+        <th>${product.arg1}</th>
+    </tr>
+    <tr>
+        <th>*Packing</th>
+        <th>${product.arg2}</th>
+    </tr>
+    <tr>
+        <th>*Quantity</th>
+        <th>${product.arg3}</th>
+    </tr>
+</table> -->
+
+<table>
+<tr>
+    <th>*Manufacturer</th>
+    <th>*Datecode</th>
+    <th>*Packing</th>
+    <th>*Quantity</th>
+</tr>
+<tr>
+    <th>${product.intro || ''}</th>
+    <th>${product.arg1}</th>
+    <th>${product.arg2}</th>
+    <th>${product.arg3}</th>
+</tr>
+</table>
+</body>
+<style>
+    table th{
+        border-right: 1px solid #dbdbdb;
+        border-bottom: 1px solid #dbdbdb;
+    }
+</style>
+</html>

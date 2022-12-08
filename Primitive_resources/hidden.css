@@ -1,0 +1,19 @@
+/* 常用的两个文本溢出省略 */
+
+/* 单行文本溢出隐藏 */
+.nowrap {
+  width: 300px;/* 必须有宽度 */
+  overflow: hidden;
+  text-overflow: ellipsis;/* 溢出显示省略号 */
+  white-space: nowrap;
+}
+
+
+/* 多行文本溢出隐藏 */
+.hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;/* 溢出显示省略号 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;/* 该数字表示行数 */
+}
