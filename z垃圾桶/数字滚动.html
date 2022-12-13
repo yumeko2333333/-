@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数字滚动-未实现</title>
+  <script>
+    $(document).ready(function(){
+    //优势[数字]
+    $('.counter').countTo();
+    if ($('.counter').length) {
+      var counter = $('.counter');
+      counter.waypoint(function (direction) {
+        if (direction == 'down') {
+          counter.countTo();
+        }
+      }, { offset: '65%'});   
+    }
+  });		
+  
+  $(document).ready(function(){
+    $("#butmsg").click(function(){
+      ECHAT.customNewWinChat();
+    });
+    
+    $(".dtewm img").hover(function(){
+        $(".dtbewm").toggle();
+      });	
+  })
+  </script>
+</head>
+<body>
+  <div class="adBg">
+    <div class="adbox">
+        <ul>
+            <li>
+                <div class="adtxt">
+                    <p>国内第1家法国全案服务商</p>
+                    <i class="counter" data-speed="1500" data-from="0" data-to="1"></i>
+                </div>
+            </li>
+            <li>
+                <div class="adtxt">
+                    <p>2支本地职业律师团队</p>
+                    <i class="counter" data-speed="1500" data-from="0" data-to="2"></i>
+                </div>
+            </li>
+            <li>
+                <div class="adtxt">
+                    <p>10+年执业经验</p>
+                    <i class="counter" data-speed="1500" data-from="0" data-to="10"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
