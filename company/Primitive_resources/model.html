@@ -1,8 +1,29 @@
+<!-- The following fields will help you at work -->
+
+公司配置
 <span dynamic-var="config['公共']['公司手机']">${config['公共']['公司手机']}</span>
 
 <img dynamic-var="config['公共']['logo']" src="${config['公共']['logo']}">
 
 <dynamic-load component="products.js" data="{'id': 28344}"></dynamic-load>
 
+<script>
+let list = siteData.product_categorys.filter(item => !item.parent_id).slice(0,8);
+// 选中父分类.filter(item => !item.parent_id)
+// Select Parent Category
+// 限制数量.slice(0,8)
+//Limit quantity
+
+//${JSON.stringify(list)}
+// 遍历名称
+// Traversal name
+</script>
+
+<hr>
+
+<h4>a标签: 链接各平台</h4>
 <!-- 连接WhatsApp =加号码-->
-<a href="https://api.whatsapp.com/send?phone="></a>
+<!-- Connect WhatsApp -->
+<a href="https://api.whatsapp.com/send?phone=Replace this text with a number">WhatsApp</a>
+<!-- Connect QQ -->
+<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2806093184&amp;menu=yes">在线QQ</a>
