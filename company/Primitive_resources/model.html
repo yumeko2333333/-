@@ -17,7 +17,10 @@ let list = siteData.product_categorys.filter(item => !item.parent_id).slice(0,8)
 //${JSON.stringify(list)}
 // 遍历名称
 // Traversal name
+
+<div class="subtitle2">${product.intro ? product.intro.split('\n').join('<br>'):''}</div>
 </script>
+
 
 <hr>
 
