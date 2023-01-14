@@ -7,6 +7,8 @@
 
 <dynamic-load component="products.js" data="{'id': 28344}"></dynamic-load>
 
+<a href="${item.link}">${item.arg1 || '姜涛'}</a>
+
 <script>
 let list = siteData.product_categorys.filter(item => !item.parent_id).slice(0,8);
 // 选中父分类.filter(item => !item.parent_id)
