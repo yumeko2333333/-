@@ -4,19 +4,33 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navs-yumeko.no</title>
-  <link rel="stylesheet" href="./css/base_pc.css">
+  <title>Home-yumeko.no</title>
+  <link rel="stylesheet" href="css/base.css">
 </head>
 <body>
   <div class="container">
     <div id="header">
-      <!-- 滚动条 -->
-      <marquee behavior="scroll" direction="left" loop="-1" onmouseover="this.stop()" onmouseout="this.start()">伍津玉的奇妙冒险 即将启程！Jade's wonderful adventure is about to start!</marquee>
+      <!-- logo -->
+      <a href="index.html" class="logo fl">
+        <img src="image/样品.png" width="100px">
+      </a>
+      <!-- 导航菜单 -->
+      <ul class="nav fr">
+        <li><a href="index.html">伍津玉的</a></li>
+        <li><a href="#">龗制</a></li>
+        <li><a href="#">龗记</a></li>
+        <li><a href="#">铃木樱社</a></li>
+        <li><a href="navs.html">奇妙冒险</a></li>
+      </ul>
+    </div>
       <!-- banner -->
       <div id="banner">
-        <img src="" alt="">
+        <img src="">
       </div>
-    </div>
+      <!-- 滚动条 -->
+      <div class="scroll_bar" style="display: none;">
+      <marquee behavior="scroll" direction="left" loop="-1" onmouseover="this.stop()" onmouseout="this.start()">伍津玉的奇妙冒险 即将启程！Jade's wonderful adventure is about to start!</marquee>
+      </div>
   </div>
 </body>
 </html>

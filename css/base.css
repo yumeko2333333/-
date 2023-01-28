@@ -1,0 +1,52 @@
+/* 通用样式 */
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+/* 版心类 */
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+/* 浮动类 */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/* header 样式开始 */
+#header {
+  width: 100%;
+  height: 10vh;
+}
+#header ul li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+#header ul li a {
+  position: relative;
+}
+#header ul li a::after {
+  content: "";
+  position: absolute;
+  background: green;
+  width: 0;
+  height: 3px;
+  right: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+#header ul li a:hover::after {
+  width: 100%;
+}
+/* header 样式结束 */
+
+/* banner 样式开始 */
+/* banner 样式结束 */
+/* footer 样式开始 */
+/* footer 样式结束 */
+
