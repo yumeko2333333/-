@@ -62,6 +62,18 @@ jumpLang('en');
 
 <hr>
 
+<!-- javascript分类导航开始 -->
+<div class="column is-3">
+  <div class="title has-text-centered-mobile">${siteData.current_menu.name}</div>
+  <div class="categorys">
+      <div class="category" style="padding-left: 0rem"><a class="${!siteData.current_article_category_id ? 'is-active' : ''}" href="${siteData.current_menu.link}">All news</a></div>
+      ${renderCategoryMenus(siteData.article_categorys.filter(item => !item.parent_id), 0)}
+  </div>
+</div>
+<!-- javascript分类导航结束 -->
+
+<hr>
+
 <script>
 // 网页执行。自动下载10个图片
 $('.card > .svg-card > svg').each((index, elem) => {
@@ -79,9 +91,9 @@ document.body.removeChild(downloadLink);
 </script>
 <script>
   // 输出1
-  var str = 'woc'
-  var whatsapp = "<p>" + str + "</p>";
-  document.write(whatsapp);
+  var str = 'yumeko'
+  var name = "<span>" + str + "</span>";
+  document.write("你好" + name);
 </script>
 
 <hr>
@@ -91,7 +103,7 @@ document.body.removeChild(downloadLink);
 <!-- Connect WhatsApp -->
 <a href="https://api.whatsapp.com/send?phone=Replace this text with a number">WhatsApp</a>
 <!-- 图标 -->
-<div style="position: fixed;bottom: 0;right: 0;margin:20px;z-index: 1;">
+<div style="position: fixed;bottom: 0;right: 0;margin:20px;z-index: 10;">
   <a href="https://api.whatsapp.com/send?phone=Replace this text with a number" target="_blank"><img src="/image/whatsapp.png" style="width: 80px;"></a>
 </div>
 
