@@ -1,0 +1,12 @@
+/* 版心类 */
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+/* 浮动类 */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
