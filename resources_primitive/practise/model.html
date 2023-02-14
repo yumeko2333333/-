@@ -27,6 +27,25 @@ let list = siteData.product_categorys.filter(item => !item.parent_id).slice(0,8)
 </script>
 
 <script>
+module.exports = function (siteData, data, util) {
+    const config = util.config || {};
+    const params = data ? JSON.parse(data.replace(/'/g, '"')) : {};
+
+    // 产品列表 id筛选
+    let list = siteData.products;
+    let category = {name: '', id: ''};
+    if (siteData.current_product_category_id || params.id) {
+        // 通过参数指定的分类名， 查找到指定的产品分类
+        category = siteData.product_categorys.find(item => item.id === (siteData.current_product_category_id || params.id)) || {};
+
+        // 筛选出符合条件的产品
+        const all_categorys = siteData.product_categorys.filter(item => (item.tree || '').startsWith(category.tree));
+        list = siteData.products.filter(item => all_categorys.some(_ => _.id === item.product_category_id));
+    }
+}
+</script>
+
+<script>
 //自动增加语言按钮，加返回的一段即可
 module.exports = function (siteData, data, util) {
   const menus = siteData.menus.filter(item => !item.parent_id && item.is_show);
