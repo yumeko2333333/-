@@ -1,0 +1,4 @@
+/* 图片加渐变 */
+.bg {
+  background:-webkit-linear-gradient(left, #22262A 20%, #fff 90%);
+}
