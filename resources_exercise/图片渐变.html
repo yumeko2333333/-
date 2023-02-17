@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/base.css">
+  <title>图片加渐变颜色</title>
+</head>
+<style>
+/* 图片加渐变 当图片尺寸不够长/不够宽 */
+.father {
+  height: 600px;
+  overflow: hidden;
+}
+.son_bg {
+  width: 100%;
+  height: 100%;
+  background:-webkit-linear-gradient(left, #22262A 45%, #fff 90%);
+}
+.son_ig{
+  background-image: url('//cdn.xuansiwei.com/d1023kjb7645/1676427728076/beijingditu.jpg?x-oss-process=style/small');
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  height: 100%;
+}
+</style>
+<body>
+  <div class="father">
+    <!-- let me do it for you ~ -->
+    <div class="son_bg">
+      <div class="son_ig">
+        <!-- Not wide enough -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
