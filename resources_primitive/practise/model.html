@@ -9,7 +9,13 @@
 
 <a href="${item.link}">${item.arg1 || '姜涛'}</a>
 
-<a href="${article.attachment_url}" target="_blank">附件</a>
+<script>
+  return `
+    ${product.attachment_url ?`
+    <a class="button" href="${product.attachment_url}" target="_blank">附件</a>
+    `:''}
+  `
+</script>
 
 <a href="${item}">${item.split('/')[5].split('.pdf')[0]}}</a>
 
