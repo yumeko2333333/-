@@ -5,7 +5,12 @@
 
 <img dynamic-var="config['公共']['logo']" src="${config['公共']['logo']}">
 
-<dynamic-load component="products.js" data="{'id': 28344}"></dynamic-load>
+<dynamic-load component="products.js" data="{
+  'id': 28344,
+  'show_pre_page': 8, 
+  'image_ratio': 1.25, 
+  'object_fit': 'cover',
+}"></dynamic-load>
 
 <a href="${item.link}">${item.arg1 || '姜涛'}</a>
 
