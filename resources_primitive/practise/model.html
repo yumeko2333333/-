@@ -61,6 +61,13 @@ module.exports = function (siteData, data, util) {
 </script>
 
 <script>
+  const category = siteData.article_categorys.find(item => item.name === menu.name);// 导航菜单下拉对应相同名称的数据
+                                        if(category){
+                                        children = siteData.article_categorys.filter(item => item.parent_id === category.id);
+                                        }
+</script>
+
+<script>
 //自动增加语言按钮，加返回的一段即可
 module.exports = function (siteData, data, util) {
   const menus = siteData.menus.filter(item => !item.parent_id && item.is_show);
