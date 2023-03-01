@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="ajax.js"></script>
+<script src="vue.min.js"></script>
+<title>天气预报</title>
+<style>
+*{
+    padding: 0;
+    margin: 0;
+}
+#app{
+    width: 1500px;
+    height: 500px;
+    border: 5px solid lightskyblue;
+    margin: 100px auto 0;
+    border-radius:  13px ;
+    background: linear-gradient(to bottom,#66a7e6,#e6ecf0);
+}
+h1{
+    width: 200px;
+    margin: 50px auto;
+}
+.search{
+    width: 600px;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+}
+.p3{
+    width: 450px;
+    height: 200px;
+    position: absolute;
+    background: white;
+    border: 2px solid rgba(0, 0, 0, 0.904);
+    border-radius: 4px;
+}
+.insearch{
+    float: right;
+    display: block;
+    width: 145px;
+    height: 50px;
+    background-color: #5858d3;
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.decorate{
+    /* border:none; */
+    width: 450px;
+    /* margin: 0 20px; */
+    height: 48px;
+    outline: none;
+    font-size:20px;
+    /* font-weight: 200; */
+    border: 2px solid #00a4ff;
+    border-radius: 7px;
+}
+.hotKey{
+    margin: 10px 450px;
+    display: flex;
+}
+.hotKey a{
+    text-decoration: none;
+    color: #666;
+    margin: 0 9px;
+    padding-left: 5px;
+}
+.hotKey a:hover{
+    color:yellowgreen;
+}
+.p2 {
+    width: 1407px;
+    margin: 28px auto;
+    display: flex;
+}
+.tem{
+    color: orange;
+    text-align: center;
+}
+.day{
+    color: rgb(165, 165, 165);
+    text-align: center;
+}
+.p1{
+    /* display: inline-block; */
+    width: 197px;
+    height: 230px;
+    border-right: 1px solid #ccc;
+    text-align: center;
+    /* margin-top: 85px; */
+}
+.p1:last-child{
+    border:none;
+}
+.p1 div{
+    margin-top: 10px;
+}
+img{
+    height: 64px;
+}
+#change {
+    width: 45px;
+    height: 25px;
+    border: none;
+    background: #a0c6ea;
+    margin-left: 9px;
+    font-size: 15px;
+    margin-top: -1px;
+}
+</style>
+</head>
+<body>
+    <div id="app">    
+        <h1>天气预报</h1>
+        <div class="search">
+        <input type="text" class="decorate" placeholder="请输入城市名称" id="city" v-model="cityname" @blur="pp" @focus="xx">
+        <span class="insearch" @click="czc(cityname)">搜   索</span>
+        <div class="p3" v-if="u">
+            <div v-for="(a,b) in ss" @mousedown="cz(a)" >{{a}}</div>
+        </div>
+        </div>
+        <div class="hotKey"> 
+                热门城市：
+            <div v-for="(item,index) in arrCityName.slice(0,7)" :key="index">
+            <a href="javascript:;" @click="cz(item)">{{item}}</a></div>
+            <!-- <a href="javascript:;" @click=" czc('北京')">北京</a>
+            <a href="javascript:;" @click=" czc('上海')">上海</a>
+            <a href="javascript:;" @click=" czc('苏州')">苏州</a>
+            <a href="javascript:;" @click=" czc('大连')">大连</a>
+            <a href="javascript:;" @click=" czc('重庆')">重庆</a>
+            <a href="javascript:;" @click=" czc('深圳')">深圳</a> -->
+            <button id="change" @click="change">换一换</button>
+        </div>
+        <div class="p2" id="weather">
+        <div v-for="(item,index) in arr" :key="index" class="p1">
+            <!-- {{item.weatherimg}} -->
+            <div><img :src="`./images/${item.weatherimg}`" alt=""></div>
+            <div class="tem">
+            <div>{{item.weather}}</div>
+            <div>最低温{{item.lowest}}~最高温{{item.highest}}</div>
+            </div>
+            <div class="day">
+                {{item.date}}{{item.week}}
+            </div>
+            <div>{{item.wind}}</div>
+            <div>{{item.windsc}}</div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el:'#app',
+        data:{
+            arr:[],
+            ss:[],
+            u:false,
+            cityname:"",
+            arrCityName:["北京", "上海", "广州", "深圳", "苏州", "大连", "重庆", "杭州", "无锡", "天津", "佛山", "宁波", "南京", "成都", "东莞", "武汉", "青岛", "沈阳", "烟台", "唐山", "济南", "哈尔滨", "石家庄", "郑州", "泉州", "温州", "长沙", "南通", "长春", "潍坊", "绍兴", "福州", "淄博", "大庆", "常州", "台州", "济宁", "东营", "西安", "徐州", "临沂", "威海", "嘉兴", "邯郸", "洛阳", "沧州", "金华", "昆明", "南阳", "保定"]
+        },
+        created(){
+            this.czc("广州")
+            // console.log(this);
+            // let that = this
+            // ajax({
+            //     url:'http://api.tianapi.com/tianqi/index?key=e634fce28c35fec6ca5eb17f32a3a595&city='+cityname+"市",
+            //     type:"get",
+            //         success:function(res){
+            //             console.log("请求成功");
+            //             console.log(this);
+            //             console.log(res);
+            //             that.arr=res.newslist;
+            //     }        
+            // })
+        },
+        methods:{
+            xx(){
+                this.u=true;
+            },
+            pp(){
+                this.u=false;
+            },
+            cz(item){
+                this.cityname=item
+                this.czc(item)
+            },
+            czc:function(cityname){
+                if(this.ss.indexOf(cityname)==-1){
+                    this.ss.push(cityname)
+                }
+                let that = this
+                ajax({
+                url:'http://api.tianapi.com/tianqi/index?key=fe459a41345cdba1613f408ba3bdb693&city='+cityname+"市",
+                type:"get",
+                    success:function(res){
+                        console.log("请求成功");
+                        console.log(this);
+                        console.log(res);
+                        that.arr=res.newslist;
+            }        
+            })    
+            },
+            change(str){
+                this.arrCityName=this.arrCityName.sort(()=>Math.random()-0.5);           
+            }
+        }
+    })
+    
+
+
+</script>
+</html>
