@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.all{
+    width: 1200px;
+    margin: 0 auto;
+    
+}
+.top{
+    width: 1200px;
+    height: 24px;
+    line-height: 24px;
+    /* background-color: gray;  */
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #f36;
+}
+.allGoods{
+    margin: 10px;
+}
+.cart-warp{
+    width: 1200px;
+}
+.cart-thead{
+    color:rgba(134, 134, 134, 0.986);
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    /* width: 100%; */
+    /* background-color: green; */
+    display: flex;
+    margin-bottom: 12px;
+    border: 1px solid #e9e9e9;
+}
+.t-checkbox{
+    margin-left: 10px;
+    width: 120px;
+}
+.lieMing:nth-child(2){
+    width: 400px;
+}
+.lieMing:nth-child(3){
+    width: 100px;
+    text-align: right;
+    margin-right: 60px;
+}
+.lieMing:nth-child(4){
+    width: 150px;
+    text-align: center;
+}
+.lieMing:nth-child(5){
+    width: 100px;
+    text-align: right;
+}
+.lieMing:nth-child(6){
+    width: 130px;
+    text-align: right;
+}
+.goods{
+    width: 100%;
+    /* height: 606px; */
+    /* height: 500px; */
+    /* background-color: red; */
+}
+img{
+    width: 80px;
+    height: 112px;
+    
+    border: solid #ccc 1px;
+    padding: 5px;
+}
+.goodsItem{
+    display: flex;
+    height: 180px;
+    /* background-color: aquamarine; */
+    padding-top: 15px;
+    border-top:solid 2px #ccc;
+    font-size: 13px;
+    color: rgba(134, 134, 134, 0.986);
+    border-left: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+}
+.goodsItem:hover{
+    /* background-color: #f36; */
+    transform: scale(1.05);
+}
+.msg{
+    width: 210px;
+    font-size: 13px;
+    margin-left: 10px;
+    color: rgba(134, 134, 134, 0.986);
+}
+.imgAndmsg{
+    display: flex;
+    width: 490px;
+    margin-left: 50px;
+    margin-top: 10px
+}
+.price{
+    width: 110px;
+    height: 100px;
+    /* background-color: aqua; */
+    text-align: center;
+}
+.checkbox1{
+    margin-left: 10px;
+    margin-top: 10px
+}
+.num{
+    display: flex;
+    margin-left: 55px;
+}
+.numText{
+    /* list-style: none; */
+    text-align: center;
+    width: 40px;
+    height: 18px;
+    border: solid 1px #cacbcb;
+    outline: none;
+    /* border: none; */
+    background-color: transparent;
+}
+.numText:checked{
+    border: none;
+    /* outline: none; */
+    outline-style: none;
+}
+.numDeleteAndAdd{
+    list-style: none;
+    width: 20px;
+    height:20px;
+    line-height: 18px;
+    border: solid 1px #cacbcb;
+    text-align: center;
+    background-color: transparent;
+}
+.numPrice{
+    width: 230px;
+    text-align: center;
+}
+.buttom{
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    /* background-color: rgba(0, 255, 255, 0.527); */
+    position: relative;
+    margin-top: 10px;
+    border: 1px solid #bdbcbc;
+}
+.deleteAllItem,.deletePick{
+    width: 120px;
+    color: rgba(134, 134, 134, 0.986);
+    text-align: center;
+}
+.deleteAllItem:hover,.deletePick:hover{
+    color: orange;
+}
+.account_div{
+    width: 120px;
+    height: 50px;
+    /* background-color: blue; */
+    /* float: right; */
+    position: absolute;
+    right: 0;
+}
+.account{
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    background-color: #f36;
+    text-align: center;
+    /* margin-right: 0%; */
+    color: white;
+    font-size: 22px;
+    font-weight: 900;
+    float: right;
+}
+.kong{
+    width:450px
+}
+.select_after{
+    font-size: 14px;
+    color: rgba(134, 134, 134, 0.986);
+}
+.goodsallPrice{
+    /* background-color: blue; */
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(134, 134, 134, 0.986);
+}
+.goodsCount{
+    margin: 0 10px;
+    color: #f36;
+    font-size: 18px;
+    font-weight:bold;
+}
+.goodsAllPrice{
+    color: black;
+    font-weight: 600;
+}
+.deleteButton:hover{
+    color: red;
+}
+.checkTrue{
+    background-color: rgba(255, 190, 51, 0.384);
+}

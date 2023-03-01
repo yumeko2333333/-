@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="./vue.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div id="app">
+        <div class="all">
+            <div class="top">
+                
+                <span class="allGoods">全部商品</span>
+            </div>
+            <!-- 主要部分 -->
+            <div class="cart-warp">
+                <!-- 列表 -->
+                <div class="cart-thead">
+                    <div class="t-checkbox">
+                        <input type="checkbox" class="QuanXuan" @change="All_Select" v-model="AllSelect"> 全选
+                    </div>
+                    <div v-for="(item,index) in liebiao" :key="index" class="lieMing">
+                        <div>{{item}}</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品栏 -->
+            <div class="goods">
+                <div class="goodsItem" v-for="(item,index) in goodsItem" :key="index" :class="{'checkTrue':item.select == true}">
+                    <div class="checkbox1">
+                        <input type="checkbox" :checked="item.select" @click="Item_select(index)">
+                    </div>
+                    <div class="imgAndmsg">
+                        <div class="img"><img :src="`./images/${item.imgUrl}`"></div>
+                        <div class="msg">{{item.msg}}</div>
+                    </div>
+                    <div class="price">￥{{item.price}}</div>
+                    <div class="num">
+                        <button class="numDeleteAndAdd" @click="item.num--" :disabled="item.num <= 1">-</button>
+                        <input type="text"  class="numText" v-model="item.num">
+                        <button class="numDeleteAndAdd" @click="item.num++">+</button>
+                    </div>
+                    <div class="numPrice" >
+                        <!-- :value="num = (`${item.num}`*`${item.numPrice}`).toFixed(2)" -->
+                        <!-- 四舍五入 -->
+                        <!-- ().toFixed(2) -->
+                        ￥{{(item.num*item.price).toFixed(2)}}
+                    </div>
+                    <div class="delete">
+                        <a class="deleteButton" @click="deleteButton(index)">删除</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 底部 -->
+            <div class="buttom">
+                <div class="t-checkbox">
+                    <input type="checkbox" class="QuanXuan" @change="All_Select" v-model="AllSelect"> 全选
+                </div>
+                <div class="deletePick">
+                    <a @click="deleteselectGoods">删除选中的商品</a>
+                </div>
+                <div class="deleteAllItem">
+                    <a @click="delectAllGoods">清理购物车</a>
+                </div>
+                <div class="kong"></div>
+                <div class="select_after">
+                    已经选<span class="goodsCount">{{goodsAllCount}}</span>商品
+                </div>
+                <div class="goodsallPrice">
+                    总价：<span class="goodsAllPrice">￥{{singleToal}}</span>
+                </div>
+                <div class="account_div">
+                    <div class="account">去结算</div>
+                    <!-- <div>{{singleToal}}</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            liebiao: ["商品","单价","数量","小计","操作"],
+            
+            AllSelect:false,
+            goodsItem: [
+                {
+                    select:true,
+                    imgUrl: "goods01.png",
+                    msg: "小清新新款韩版气质收腰显瘦百搭蕾丝边V领木耳边镂空休闲连衣裙",
+                    price: "72.60",
+                    num: 1,
+                    numPrice: "72.60",
+                    
+                },
+                {
+                    select:false,
+                    imgUrl: "goods02.png",
+                    msg: "小个子韩版春夏新款小清新荷叶边中长款v领碎花雪纺吊带连衣裙",
+                    price: "84.80",
+                    num: 1,
+                    numPrice: "84.80",
+                    
+                },
+                {
+                    select:false,
+                    imgUrl: "goods03.png",
+                    msg: "夏季新款名媛气质吊带碎花连衣裙露肩波西米亚度假长裙甜美沙滩裙",
+                    price: "69.80",
+                    num: 1,
+                    numPrice: "69.80",
+                    
+                }
+            ]
+        },
+        methods:{
+            deleteButton:function(i){
+                if(confirm("确定要删除此商品吗")){
+                    console.log(i)
+                    this.goodsItem.splice(i,1)
+                }
+            },
+            All_Select:function(e){
+                console.log(e.target.checked)
+                if(e.target.checked){
+                    this.goodsItem.forEach((item,index) => {
+                        item.select = true
+                    });
+                }else{
+                    this.goodsItem.forEach((item,index) => {
+                        item.select = false
+                    });
+                }
+                // console.log(this.goodsItem.every((select)))
+            },
+            Item_select:function(index){
+                this.goodsItem[index].select = !this.goodsItem[index].select
+                // console.log(this.goodsItem[index].select)
+                let flag = this.goodsItem.every((item) => {return item.select})
+                if( flag ){
+                    console.log(flag)
+                    this.AllSelect = true
+                }else{
+                    this.AllSelect = false
+                }
+            },
+            deleteselectGoods:function(){
+                // var i
+                // console.log(this.goodsItem.length)
+                
+                if(confirm("确定要删除这件商品吗？")){
+                    for(var i=0;i<this.goodsItem.length;i++){
+                    if(this.goodsItem[i].select){
+                        this.goodsItem.splice(i,1)
+                        i--
+                    }
+                }
+                    if(this.goodsItem.length <= 0){
+                    this.AllSelect = false
+                    }
+                }
+            },
+            delectAllGoods:function(){
+                if(confirm("确定要删除全部商品吗")){
+                    this.goodsItem.splice(0,this.goodsItem.length)
+                    if(this.goodsItem.length <= 0){
+                        this.AllSelect = false
+                    }
+                }
+            }
+        },
+        computed:{
+            singleToal:function(){
+                var a = 0,allPrice = 0
+                let p=this.goodsItem.map(i=>i.price*i.num)
+                // p=p.reduce((pre,item,index,arr)=>pre+item,0)
+                for(var i=0;i<this.goodsItem.length;i++){
+                    if(this.goodsItem[i].select){
+                        a+=p[i]
+                        allPrice = (a).toFixed(2)
+                    }
+                }
+                 return  allPrice
+            },
+            goodsAllCount:function(){
+                var num = 0
+                let q=this.goodsItem.map(i => i.num)
+                for(var i=0;i<this.goodsItem.length;i++){
+                    if(this.goodsItem[i].select){
+                        num+=q[i]
+                    }
+                }
+                return num
+            }    
+        }
+    })
+</script>
+</html>
