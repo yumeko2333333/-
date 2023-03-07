@@ -64,10 +64,17 @@ module.exports = function (siteData, data, util) {
 </script>
 
 <script>
+  // 放在渲染文章/产品列表前
   const category = siteData.article_categorys.find(item => item.name === menu.name);// 导航菜单下拉对应相同名称的数据
-                                        if(category){
-                                        children = siteData.article_categorys.filter(item => item.parent_id === category.id);
-                                        }
+    if(category){
+    children = siteData.article_categorys.filter(item => item.parent_id === category.id);
+    }
+  // 判断是否有这个栏目名的文章/产品分类，有则渲染子分类
+  // 否则渲染所有文章顶级分类
+    else if (menu.view_type === '文章列表') {
+        children = siteData.article_categorys.filter(item => !item.parent_id);
+        type = menu.view_type;
+    }
 </script>
 
 <script>
