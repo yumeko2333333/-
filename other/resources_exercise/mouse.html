@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mouse</title>
+</head>
+<body>
+  <div class="mouse">
+    <img src="/image/download.png" alt="">
+  </div>
+  <h1>hello,mouse!</h1>
+</body>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  cursor: none;           
+}
+.mouse {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  left: -200px;
+  z-index: 1000;
+  pointer-events: none;
+}
+</style>
+<script>
+var mouse = document.querySelector('.mouse');
+  window.addEventListener('mousemove',function(event){    
+    mouse.style.left = event.clientX - mouse.offsetWidth/2 + 'px' ;
+    mouse.style.top = event.clientY -mouse.offsetHeight/2 + 'px';       
+  })
+</script>
+</html>
