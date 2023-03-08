@@ -43,6 +43,10 @@ list = list.slice(0, params.size || 4);
 // 字段换行
 <div class="subtitle2">${product.intro ? product.intro.split('\n').join('<br>'):''}</div>
 </script>
+<script>
+  // 默认缩略图
+  let img_url = item.thumb_img_urls ? item.thumb_img_urls.split(',')[0] : (config['公共']['产品默认缩略图'] || config['公共']['logo'] || 'data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=');
+</script>
 
 <script>
 module.exports = function (siteData, data, util) {
@@ -154,6 +158,10 @@ document.body.removeChild(downloadLink);
 
 <!-- Connect QQ -->
 <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2806093184&amp;menu=yes">在线QQ</a>
+
+<a href="mailto: 2806093184@qq.com">邮箱</a>
+
+<a href="sms:110">短信</a>
 
 <p style="font-size: large;">你好</p>
 <p style="font-size: large;">你好</p>
