@@ -1,4 +1,8 @@
 /* 通用样式 */
+body {
+  padding: 0;
+  margin: 0;
+}
 li {
   list-style: none;
 }
@@ -48,5 +52,19 @@ a {
 /* banner 样式开始 */
 /* banner 样式结束 */
 /* footer 样式开始 */
+#footer {
+position: absolute;
+width: 100%;
+bottom: 0;
+background: #000;
+}
+#footer .copyright {
+  text-align: center;
+  font-size: 16px;
+  line-height: 3;
+  color: #fff;
+
+
+}
 /* footer 样式结束 */
 
