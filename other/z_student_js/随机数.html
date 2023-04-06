@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生成多个随机数</title>
+</head>
+<script>
+// var originalArray = [1, 2, 3, 4, 5];
+// originalArray.sort(function () {
+// return 0.5 - Math.random();
+// });
+// console.log(originalArray);
+// document.write("<h1>"+originalArray+"<h1>");
+
+//   function generateRandomNumbers(num) {
+//   let arr = [];
+//   while (arr.length < num) {
+//     let randomNum = Math.floor(Math.random() * num) + 1;
+//     if (!arr.includes(randomNum)) {
+//       arr.push(randomNum);
+//     }
+//   }
+//   return arr;
+// }
+
+// let randomNums = generateRandomNumbers(10);
+// randomNums.forEach(num => console.log(num));
+function myFunction(){
+var x="";
+for (var i = 0;i < 10 ;i++)
+{ 
+  x=x + "该数字为 " + i + "<br>";
+}
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+<body>
+  <button onclick="myFunction()">点击这里</button>
+  <p id="demo"></p>
+</body>
+</html>
