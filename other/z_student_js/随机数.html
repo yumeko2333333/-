@@ -27,17 +27,44 @@
 
 // let randomNums = generateRandomNumbers(10);
 // randomNums.forEach(num => console.log(num));
-function myFunction(){
-var x="";
-for (var i = 0;i < 10 ;i++)
-{ 
-  x=x + "该数字为 " + i + "<br>";
+// function myFunction(){
+// var x="";
+// for (var i = 0;i < 10 ;i++)
+// { 
+//   x=x + "该数字为 " + i + "<br>";
+// }
+// document.getElementById("demo").innerHTML=x;
+// }
+
+console.dir(((len, count) => [...Array(count).keys()].map(() => 'M'+[...Array(len).keys()].map(() => Math.floor(Math.random() * 10)).join('')).join('\n'))(7, 10))
+</script>
+<script>
+// let nums = new Set(); // create a Set to store unique numbers
+// while (nums.size < 10) { // loop until we have 10 unique numbers
+//   let num = "M"; // start with the letter M
+//   for (let i = 0; i < 7; i++) { // add 7 random digits
+//     num += Math.floor(Math.random() * 10); // add a random digit to the string
+//   }
+//   nums.add(num); // add the generated number to the Set
+// }
+// console.log(nums); // output the Set of unique numbers
+</script>
+<script>
+let nums = new Set(); // create a Set to store unique numbers
+const invalidNums = new Set(["M4562875", "M8979462", "M984356"]); // create a Set of invalid numbers
+while (nums.size < 10) { // loop until we have 10 unique numbers
+  let num = "M"; // start with the letter M
+  for (let i = 0; i < 7; i++) { // add 7 random digits
+    num += Math.floor(Math.random() * 10); // add a random digit to the string
+  }
+  if (!invalidNums.has(num)) { // check if the generated number is not invalid
+    nums.add(num); // add the generated number to the Set
+  }
 }
-document.getElementById("demo").innerHTML=x;
-}
+console.log(nums); // output the Set of unique numbers
 </script>
 <body>
-  <button onclick="myFunction()">点击这里</button>
-  <p id="demo"></p>
+  <!-- <button onclick="myFunction()">点击这里</button>
+  <p id="demo"></p> -->
 </body>
 </html>
