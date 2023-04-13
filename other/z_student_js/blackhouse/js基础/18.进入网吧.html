@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伍津玉开的网吧</title>
+</head>
+<body>
+    <h1 style="text-align: center; color: yellowgreen;">伍津玉说网吧的电脑还没买，欢迎下次光临</h1>
+</body>
+<script>
+    let age = prompt('请输入你的年龄');
+    // 输入框内信息大于18即可进入
+    if(age >= 18){
+        alert('欢迎光临伍津玉开的网吧');
+    }else{
+        alert('小学生要好好读书');
+        // 提示窗确定后跳转页面
+        window.location.href="./进入网吧.html"
+    }
+</script>
+</html>

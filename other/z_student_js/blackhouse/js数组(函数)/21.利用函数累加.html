@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用函数求1~100累加和</title>
+</head>
+<body>
+</body>
+<script>
+    // 封装一个求和函数getsum
+    function getsum(num1,num2){
+        // 记得声明初始的sum
+        let sum = 0;
+        for(i = num1; i <= num2 ; i++){
+            sum += i;
+        }
+        // 输出写在function里面
+        // console.log(sum);
+        // 25.添加返回值后就不用写在里面！！
+        // 写法：return 函数名
+        return getsum;
+    }
+    // getsum(1,100);
+    // 添加返回值后可在外面输出！！
+    // 写法：console.log(getsum(实参1,实参2...));
+    console.log(getsum(1,100));
+    
+    // 两个数求和
+    // function getsum(num1,num2) {
+    //     return num1+num2;
+    // }
+    // console.log(getsum(1,99));
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交换</title>
+</head>
+<body>
+    
+</body>
+<script>
+// 1.交换两个变量值
+    // 声明两个变量
+    let num1 = 1;
+    let num2 = 2;
+    // 建一个变量来交换数据
+    let temp;
+    temp = num1; //num1的数据传给temp，此时temp = 1
+    num1 = num2; //num2的数据传给num1，此时num1 = 2
+    num2 = temp; //temp将num1传给它的数据传给num2，此时num2 = 1
+    console.log(num1,num2);
+// 2.交换两个数组元素
+    let arr = [1,2,3,4,5,6];
+    // 建一个空数组来存放替换元素后的数组
+    let newArr =[];
+    // 这个数组的长度等于原数组长度
+    for(i = 0;i < arr.length; i++){
+        newArr[newArr.length] = arr[i];
+    }
+    // 把2和3调换过来
+    newArr[1]=arr[2];
+    newArr[2]=arr[1];
+    console.log(newArr);
+</script>
+</html>

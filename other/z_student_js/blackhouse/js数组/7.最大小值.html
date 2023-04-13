@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求最大值</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr = [22,18,6,10,35,16];
+    // 声明一个保存最大元素的变量max 默认最大值可以取数组钟的第一个元素
+    let max = arr[0];
+    // 声明一个保存最大元素的变量max 默认最大值可以取数组钟的第一个元素
+    let min = arr[0];
+    // 遍历这个数组
+    for(i = 0; i < arr.length; i++){
+    // 把里面的每个数组和max比较，
+        if(arr[i] > max){
+            // 如果这个数组元素大于max 就把这个数组元素存到max里面，否则继续下一轮的比较
+            max = arr[i];
+        }
+    // 把里面的每个数组和min比较，
+        if(arr[i] < min){
+            // 如果这个数组元素小于min 就把这个数组元素存到min里面，否则继续下一轮的比较            
+            min = arr[i];
+        }        
+    }
+    // 最后输出max、min
+    console.log('该数组的最大值为：' + max,'该数组的最小值为：' + min);
+</script>
+</html>

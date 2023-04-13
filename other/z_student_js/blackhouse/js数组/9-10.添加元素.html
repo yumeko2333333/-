@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加数组元素</title>
+</head>
+<body>
+    
+</body>
+<script>
+// 1.1.增加数组长度
+    let arr1 = [1,2,3];
+    console.log(arr1.length);//输出数组长度 结果：3
+    arr1.length = 5;//数组长度修改为5
+    console.log(arr1);//输出数组所有元素 结果：(5) [1, 2, 3, empty × 2] 没有数组会显示为空
+    // 1.2.增加数组元素
+    arr1[3] = 4;// 第四个 索引号为3
+    arr1[4] = 5;// 第五个 索引号为4
+    console.log(arr1);//输出数组所有元素 结果：(5) [1, 2, 3, 4, 5]
+
+// 2.创建一个空数组用来存放1-10个值
+    let arr = [];
+    for(i = 0; i < 10; i++){
+        // 不要直接 arr = i 给数组赋值！！会覆盖掉原来的所有元素 结果会成i，而不是(10) [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]了
+        arr[i] = i;
+    }
+    console.log(arr);
+</script>
+</html>
