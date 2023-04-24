@@ -1,0 +1,7 @@
+<!-- 创建一个.htaccess文件，并将下面提供的代码写入文件内，它可以确保旧域名所有的目录或者网页正确的跳转到新域名内。
+记住.htaccess文件一定要放在旧网站的根目录下，并且新网站要和旧网站保持相同的目录结构及网页文件 -->
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule (.*) http://www.jadekey.tk/$1 [R=301,L]
+<br>
+<a href="https://baike.baidu.com/item/%E9%87%8D%E5%AE%9A%E5%90%91/9064196?fr=aladdin">重定向</a>
