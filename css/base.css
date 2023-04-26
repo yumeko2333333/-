@@ -2,7 +2,14 @@
 body {
   padding: 0;
   margin: 0;
-  background-image: url(/image/not-copyrighted/g1.jpg);
+  background-image: url(/image/bg_tb.jpg);
+}
+@media (max-width: 640px) {
+  body {
+  background-image: url(/image/bg_md.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
 }
 li {
   list-style: none;

@@ -1,0 +1,22 @@
+
+<!-- 产品id筛选 -->
+<dynamic-load component="products.js" data="{
+  'id': 28344,
+  'show_pre_page': 8, 
+  'image_ratio': 1.25, 
+  'object_fit': 'cover',
+}"></dynamic-load>
+<!-- 公司配置 -->
+<img dynamic-var="config['公共']['logo']" src="${config['公共']['logo']}">
+<!-- 文章时间 -->
+${util.moment(article.publish_time).format('YYYY-MM-DD')}
+<!-- 文章链接 -->
+<a href="${item.link}">${item.arg1 || '姜涛'}</a>
+<!-- 产品附件 -->
+${product.attachment_url ?`
+<a class="button" href="${product.attachment_url}" target="_blank">附件</a>
+`:''}
+<!-- 字段换行 -->
+<div class="subtitle2">${product.intro ? product.intro.split('\n').join('<br>'):''}</div>
+<!-- pdf 忘记是什么了 -->
+<a href="${item}">${item.split('/')[5].split('.pdf')[0]}</a>

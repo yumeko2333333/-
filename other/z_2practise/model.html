@@ -1,28 +1,5 @@
 <!-- The following fields will help you at work -->
 
-公司配置
-<span dynamic-var="config['公共']['公司手机']">${config['公共']['公司手机']}</span>
-
-<img dynamic-var="config['公共']['logo']" src="${config['公共']['logo']}">
-
-<dynamic-load component="products.js" data="{
-  'id': 28344,
-  'show_pre_page': 8, 
-  'image_ratio': 1.25, 
-  'object_fit': 'cover',
-}"></dynamic-load>
-
-<a href="${item.link}">${item.arg1 || '姜涛'}</a>
-
-<script>
-  return `
-    ${product.attachment_url ?`
-    <a class="button" href="${product.attachment_url}" target="_blank">附件</a>
-    `:''}
-  `
-</script>
-
-<a href="${item}">${item.split('/')[5].split('.pdf')[0]}}</a>
 
 <script>
 let list = siteData.product_categorys.filter(item => !item.parent_id).slice(0,8);
@@ -39,10 +16,6 @@ let list = siteData.product_categorys.filter(item => !item.parent_id).slice(0,8)
 list = list.slice(0, params.size || 4);
 </script>
 
-<script>
-// 字段换行
-<div class="subtitle2">${product.intro ? product.intro.split('\n').join('<br>'):''}</div>
-</script>
 <script>
   // 默认缩略图
   let img_url = item.thumb_img_urls ? item.thumb_img_urls.split(',')[0] : (config['公共']['产品默认缩略图'] || config['公共']['logo'] || 'data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=');
@@ -66,7 +39,6 @@ module.exports = function (siteData, data, util) {
     }
 }
 </script>
-
 <script>
   // 放在渲染文章/产品列表前
   const category = siteData.article_categorys.find(item => item.name === menu.name);// 导航菜单下拉对应相同名称的数据
@@ -79,6 +51,21 @@ module.exports = function (siteData, data, util) {
         children = siteData.article_categorys.filter(item => !item.parent_id);
         type = menu.view_type;
     }
+</script>
+
+<script>
+  // id筛选 类似写法 冲突强迫难受 所以写成中文
+  const params = JSON.parse(data.replace(/'/g, '"'));
+  
+  // 通过参数指定的分类名， 查找到指定的文章分类
+  const 分类 = siteData.article_categorys.find(item => item.id === (siteData.current_article_category_id || params.id));
+  
+  // 查询分类下面的子分类
+  const children = siteData.article_categorys.filter(item => item.parent_id === category.id).map(item=>item.id);
+  
+  // 合并分类和子分类
+  const ids = [category.id].concat(children)
+  const 列表 = siteData.articles.filter(article => ids.includes(article.article_category_id)).slice(0,4)
 </script>
 
 <script>
