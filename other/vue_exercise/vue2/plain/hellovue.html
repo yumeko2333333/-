@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hellow vue</title>
+    <script src="/other/vue_exercise/vue/Vue.js"></script>
+</head>
+<style>
+  table th{
+    border-right: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+  }
+</style>
+<body>
+<div id="app">
+  <table>
+    <th>
+      <tr>1</tr>
+      <tr>2</tr>
+      <tr>3</tr>
+      <tr>4</tr>
+    </th>
+    <th>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+    </th>
+  </table>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue.js!'
+    }
+  })
+</script>
+</body>
+</html>
