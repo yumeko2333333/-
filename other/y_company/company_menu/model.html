@@ -1,6 +1,19 @@
 <!-- The following fields will help you at work -->
-
-
+<a href="/image/样品2.png" download="/image/样品2.png">点击下载</a>
+<script>
+  // 文件下载
+  return`
+    ${attachment_url.length > 0 ? `
+      <div class="intro">文件下载:
+      ${attachment_url.map(item =>{
+          return `
+          <a href="${item}"><i class="fa fa-file-pdf-o"></i>${article.title}</a>
+          `
+      }).join("\n")}
+      </div>    
+    `:''}
+  `
+</script>
 <script>
 let list = siteData.product_categorys.filter(item => !item.parent_id).slice(0,8);
 // 选中父分类.filter(item => !item.parent_id)
