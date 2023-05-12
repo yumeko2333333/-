@@ -1,5 +1,6 @@
 <!-- The following fields will help you at work -->
-<a href="/image/样品2.png" download="/image/样品2.png">点击下载</a>
+<a href="/image/样品2.png" download="/image/样品2.png">Download</a>
+<a href="/image/样品2.png" target="_blank">View</a>
 <script>
   // 文件下载
   return`
@@ -67,7 +68,7 @@ module.exports = function (siteData, data, util) {
 </script>
 
 <script>
-  // id筛选 类似写法 冲突强迫难受 所以写成中文
+  // id筛选 类似写法（没有找到定义） 冲突强迫难受 所以写成中文
   const params = JSON.parse(data.replace(/'/g, '"'));
   
   // 通过参数指定的分类名， 查找到指定的文章分类
