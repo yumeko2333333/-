@@ -14,7 +14,12 @@
   };
   }
   </script>
-  <body>
-    <div id="son">密码：<input id="password" class="box" onclick="resume()" placeholder="回车确认"><br></div>
-  </body>
+<body>
+  <form action="#">
+    <div id="son">
+    昵称：<input type=text value="wuhuabamen" onfocus="javascript:if(this.value=='wuhuabamen')this.value='用刚才那个昵称';else if(this.value=='用刚才那个昵称')this.value='you forgot';else if(this.value=='you forgot')this.value='';"><br>
+    密码：<input id="password" type="password" class="box" onclick="resume()" placeholder="回车确认">
+    </div>
+  </form>
+</body>
 </html>
