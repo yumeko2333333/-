@@ -1,88 +1,6 @@
 <!-- The following fields will help you at work -->
 ${config['公共']['logo']}
 
-<a href="/image/样品2.png" download="/image/样品2.png">Download</a>
-<a href="/image/样品2.png" target="_blank">View</a>
-<script>
-  // 文件下载
-  return`
-    ${attachment_url.length > 0 ? `
-      <div class="intro">文件下载:
-      ${attachment_url.map(item =>{
-          return `
-          <a href="${item}"><i class="fa fa-file-pdf-o"></i>${article.title}</a>
-          `
-      }).join("\n")}
-      </div>    
-    `:''}
-  `
-</script>
-<script>
-let list = siteData.product_categorys.filter(item => !item.parent_id).slice(0,8);
-// 选中父分类.filter(item => !item.parent_id)
-// Select Parent Category
-// 限制数量.slice(0,8)
-//Limit quantity
-
-//${JSON.stringify(list)}
-// 遍历名称
-// Traversal name
-
-// 单独的
-list = list.slice(0, params.size || 4);
-</script>
-
-<script>
-  // 默认缩略图
-  let img_url = item.thumb_img_urls ? item.thumb_img_urls.split(',')[0] : (config['公共']['产品默认缩略图'] || config['公共']['logo'] || 'data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=');
-</script>
-
-<script>
-module.exports = function (siteData, data, util) {
-    const config = util.config || {};
-    const params = data ? JSON.parse(data.replace(/'/g, '"')) : {};
-
-    // 产品列表 id筛选
-    let list = siteData.products;
-    let category = {name: '', id: ''};
-    if (siteData.current_product_category_id || params.id) {
-        // 通过参数指定的分类名， 查找到指定的产品分类
-        category = siteData.product_categorys.find(item => item.id === (siteData.current_product_category_id || params.id)) || {};
-
-        // 筛选出符合条件的产品
-        const all_categorys = siteData.product_categorys.filter(item => (item.tree || '').startsWith(category.tree));
-        list = siteData.products.filter(item => all_categorys.some(_ => _.id === item.product_category_id));
-    }
-}
-</script>
-<script>
-  // 放在渲染文章/产品列表前
-  const category = siteData.article_categorys.find(item => item.name === menu.name);// 导航菜单下拉对应相同名称的数据
-    if(category){
-    children = siteData.article_categorys.filter(item => item.parent_id === category.id);
-    }
-  // 判断是否有这个栏目名的文章/产品分类，有则渲染子分类
-  // 否则渲染所有文章顶级分类
-    else if (menu.view_type === '文章列表') {
-        children = siteData.article_categorys.filter(item => !item.parent_id);
-        type = menu.view_type;
-    }
-</script>
-
-<script>
-  // id筛选 类似写法（没有找到定义） 冲突强迫难受 所以写成中文
-  const params = JSON.parse(data.replace(/'/g, '"'));
-  
-  // 通过参数指定的分类名， 查找到指定的文章分类
-  const 分类 = siteData.article_categorys.find(item => item.id === (siteData.current_article_category_id || params.id));
-  
-  // 查询分类下面的子分类
-  const children = siteData.article_categorys.filter(item => item.parent_id === category.id).map(item=>item.id);
-  
-  // 合并分类和子分类
-  const ids = [category.id].concat(children)
-  const 列表 = siteData.articles.filter(article => ids.includes(article.article_category_id)).slice(0,4);
-</script>
 
 <script>
 //自动增加语言按钮，加返回的一段即可
@@ -117,18 +35,6 @@ jumpLang('en');
       location.href = '/en';
   }
 </script>
-
-<hr>
-
-<!-- javascript分类导航开始 -->
-<div class="column is-3">
-  <div class="title has-text-centered-mobile">${siteData.current_menu.name}</div>
-  <div class="categorys">
-      <div class="category" style="padding-left: 0rem"><a class="${!siteData.current_article_category_id ? 'is-active' : ''}" href="${siteData.current_menu.link}">All news</a></div>
-      ${renderCategoryMenus(siteData.article_categorys.filter(item => !item.parent_id), 0)}
-  </div>
-</div>
-<!-- javascript分类导航结束 -->
 
 <hr>
 

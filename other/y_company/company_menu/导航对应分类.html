@@ -1,0 +1,22 @@
+<script>
+// 写在menus.map里
+  const link = menu.link // 栏目链接
+  const isCurrent = (menu.id === siteData.current_menu.id || menu.id === siteData.current_menu.parent_id); // 是否当前栏目
+  let children = siteData.menus.filter(item => item.parent_id === menu.id && item.is_show); // 子栏目
+  const category = siteData.article_categorys.find(item => item.name === menu.name);// 导航菜单下拉对应相同名称的数据
+  let type = '栏目';
+  if (children.length === 0) { // 如果没有子栏目，检查下视图类型是否为：产品列表|文章列表
+    if(category){
+          children = siteData.product_categorys.filter(item => item.parent_id === category.id);
+    } else if (menu.view_type === '产品列表') {
+          children = siteData.product_categorys.filter(item => !item.parent_id);
+          type = menu.view_type;
+    };
+    if(category){
+          children = siteData.article_categorys.filter(item => item.parent_id === category.id);
+    } else if (menu.view_type === '文章列表') {
+        children = siteData.article_categorys.filter(item => !item.parent_id);
+        type = menu.view_type;
+    }
+  }
+</script>
