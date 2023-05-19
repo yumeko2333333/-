@@ -1,0 +1,75 @@
+<style type="text/less">
+  .search{
+      margin: 0.25rem auto;
+      width: 100%;
+      z-index: 999;
+      .wrap{
+          width: 100%;
+          background-color: #fff;
+          position: relative;
+          border-radius: 0.5rem;
+      }
+      .search-box{
+          max-width: 730px;
+          width: 100%;
+          margin: 0 auto;
+          border: 3px solid #EAEAEA;
+          border-radius: 1rem;
+          .control1{
+              flex: 1;
+              input{
+                      width: 100%;
+                      padding: 0.5rem;
+                      border: none;
+                      outline: none;
+                      font-size: 18px;
+                      border-radius: 1rem;
+              }
+          }
+          .control{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              a{
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      padding: 0.5rem;
+                      width: 100px;
+                      border-radius: 5px;
+                      background: @primary-color;
+                  color: @white;
+                  border-radius: 5px;
+                  img{
+                      max-width: 30px;
+                  }
+              }
+          }
+      }
+  }
+  </style>
+    <div class="search">
+      <div class="wrap">
+          <div class="search-box field has-addons">
+              <div class="control control1">
+                  <input type="text" id="search_keyword2" placeholder="">
+              </div>
+              <div class="control">
+                  <a href="javascript:;" class="search_btn">
+                      <!-- <img src="//cdn.xuansiwei.com/zhuka1502/1599968713017/Search.png?x-oss-process=style"> -->
+                      产品搜索
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <script>
+    // 点击搜索
+    $('.search_btn').click(function() {
+        if (!$('#search_keyword2').val()) {
+            alert('请输入搜索内容');
+        } else {
+            window.location.href = "/search.html?keyword=" + $('#search_keyword2').val();
+        }
+    })
+</script>
