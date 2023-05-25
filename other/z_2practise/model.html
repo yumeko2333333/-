@@ -53,3 +53,19 @@ downloadLink.click();
 document.body.removeChild(downloadLink);
 })  
 </script>
+
+<style>
+  .lg-backdrop {z-index: 104000}
+  .lg-outer {z-index: 105000}
+  .group:before, .group:after {display: none;}
+</style>
+<script src="//cdn.xuansiwei.com/common/lib/lightGallery/js/lightgallery-all.js"></script>
+<script>
+  // 图片放大查看
+  $('#about_certificate img.resource').click(function() {
+      $(this).lightGallery({
+          dynamic: true,
+          dynamicEl: $('#about_certificate img.resource').map((index, elem) => ({src: $(elem).attr('src'), thumb: $(elem).attr('src')})).get()
+      });
+  });
+</script>
