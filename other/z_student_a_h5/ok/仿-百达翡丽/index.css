@@ -1,0 +1,354 @@
+/* 全局开始 */
+* {
+    color: #C0AF9F;
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* 全局结束 */
+/* 头部开始 */
+#header .logo {
+    width: 165px;
+    height: 88px;
+    margin: 40px auto;
+}
+#header .logo img {
+    width: 100%;
+}
+#header .logo img:nth-child(2) {
+    position: relative;
+    top: -88px;
+}
+#header .nav {
+    width: 100%;
+
+}
+#header .nav ul {
+    display: flex;
+    justify-content: center;
+}
+#header .nav li{
+    line-height: 90px;
+    align-items: center;
+    font-size: 20px;
+    padding: 0 20px;
+}
+#header .nav li:hover {
+    background-color: #8C7A66;
+}
+#header .nav li a {
+    line-height: 80px;
+    text-decoration: none;
+    display: block;
+}
+#header .nav li a:hover {
+    color: #fff;
+    border-bottom: 4px solid #fff;
+}
+#header .nav li .active {
+    font-size: 16px;
+    font-style: italic;
+    border-bottom: 4px solid #C0AF9F;
+}
+#header .nav li img {
+    width: 20px;
+    height: 20px;
+}
+/* 头部结束 */
+/* banner开始 */
+#center .banner {
+    position: relative;
+    height: 763px;
+}
+#center .banner .v_text{
+    position: absolute;
+    top: 43%;
+    right: 50px;
+    text-align: right;
+}
+#center .banner .v_text p {
+    margin: 0;
+    color: #fff;
+    font-size: 36px;
+    line-height: 40px;
+}
+#center .banner .v_text a {
+    margin-top: 10px;
+    display: inline-block;
+    width: 94px;
+    line-height: 36px;
+    border: 1px solid #fff;
+}
+#center .banner .v_text a:hover {
+    background-color: #fff;
+}
+#center .banner .v_text a span {
+    display: block;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+}
+#center .banner .v_text a span:hover {
+    color: #C0AF9F;
+}
+/* banner结束 */
+/* 亮点开始 */
+#liangdian {
+    width: 100%;
+    height: 370px;
+}
+#liangdian p {
+    color: #000;
+    text-align: center;
+}
+#liangdian .main {
+    width: 1100px;
+    margin: 0 auto;
+}
+#liangdian .p_title{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 22px;
+}
+#liangdian hr {
+    margin: 10px;
+}
+#liangdian ul {
+    display: flex;
+    justify-content: center;
+}
+#liangdian ul li {
+    margin: 0 10px;
+    position: relative;
+}
+#liangdian ul li img {
+    width: 100%;
+}
+#liangdian ul li .liangdian_title{
+    font-size: 11px;
+    line-height: 32px;
+}
+#liangdian ul li .liangdian_title span{
+    color: #F95112;
+}
+#liangdian ul li .jiantou {
+    font-size: 48px;
+    position: absolute;
+    width: 65px;
+    height: 45px;
+    bottom: 20%;
+    right: 8%;
+    border: 1px solid #8C7A66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #99999960;
+    color: #fff;
+}
+#liangdian ul li .jiantou:hover {
+    background-color: #fff;
+    color: #8C7A66;
+}
+/* 亮点结束 */
+/* biao开始 */
+#biao {
+    background-color: #8C7A66;
+    width: 100%;
+    height: 388px;
+    padding-top: 40px;
+    padding-bottom: 14px;
+}
+#biao .biao_ul{
+    display: flex;
+    justify-content: center;
+}
+#biao .biao_ul img {
+    width: 140px;
+    height: 190px;
+    object-fit: contain;
+}
+#biao .products_section_title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+#biao .products_section_title strong {
+    color: #fff;
+}
+#biao .biao_ul a {
+    margin: 0 20px;
+    text-align: center;
+}
+.collection_name {
+    min-height: 38px;
+    max-width: 150px;
+    margin: auto;
+    margin-bottom: 3px; 
+    color: #fff;
+    line-height: 15px;
+    font-size: 14px;
+}
+.number_of_models {
+    border: solid 1px #fff;
+    width: 125px;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+.number_of_models:hover {
+    color: #8C7A66;
+    background-color: #fff;
+}
+.articleRef_slider {
+    color: #C5BBB2;
+    font-size: 12px;
+}
+/* biao结束 */
+#banner_three {
+    position: relative;
+}
+#banner_three .img {
+    width: 100%;
+    height: 337px;
+    background-color: #1A120F;
+}
+#banner_three img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+#banner_three .ctn {
+    position: absolute;
+    margin-right: 50%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15%;
+    text-align: right;
+}
+#banner_three .ctn .txts h2{
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #8C7A66;
+    padding: 0px;
+    font-weight: normal;
+    padding-bottom: 40px;
+    width: 300px;
+}
+#banner_three .link a {
+    border: 2px solid #8C7A66;
+    width: 138px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 160px;
+    margin-top: 10px;
+}
+.link a:hover  {
+    color: #fff;
+    background-color: #8C7A66;
+}
+#banner_four {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+}
+#banner_four .img {
+    width: 100%;
+    height: 324px;
+    background-color: #E2DFDA;
+}
+#banner_four img {
+    height: 324px;
+    position: absolute;
+    left: 24%;
+}
+#banner_four .ctn{
+    margin-left: 50%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+}
+#banner_four .ctn .txts {
+    margin-right: auto;
+    max-width: 400px;
+    width: calc(100% - 35px);
+    
+}
+#banner_four .ctn .txts h2{
+    color: #ab947d;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 21px;
+    margin: 0px;
+}
+#banner_four .ctn .txts p{
+    background-color: transparent;
+    color: #463527;
+    margin-top: 12px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 19px;
+}
+#banner_four .ctn .link a {
+    border: 2px solid #8C7A66;
+    width: 230px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #C0AF9F;
+    margin-top: 15px;
+    text-align: left;
+}
+/* 脚部开始 */
+#footer {
+    width: 1200px;
+    margin: 0 auto;
+}
+#footer .footer_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer .footer_nav ul{
+    padding: 20px;
+}
+#footer .info_logo {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+#footer .logo {
+    width: 165px;
+    height: 88px;
+    margin: 40px auto;
+}
+#footer .logo img {
+    width: 100%;
+}
+#footer .logo img:nth-child(2) {
+    position: relative;
+    top: -88px;
+}
+/* 脚部结束 */
